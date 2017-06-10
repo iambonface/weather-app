@@ -60,7 +60,14 @@ body{
 	margin-right: auto;
 }
 
+#Cloud{
+	text-align: center;
+	font-size: : 500px;
+}
 
+.fa{
+	color: white;
+}
 
 .fa-heart{
 	color: red;
@@ -72,11 +79,34 @@ body{
 	color: orange;
 }
 .forecast-row{
-	font-size: 13px;
+	font-size: 15px;
     text-align: center;
     margin-top: 3px;
 
 }
+.fa-map-marker{
+	font-size: 50px;
+	color: orange;
+}
+
+.fa-tachometer{
+	color: green;
+}
+
+.fa-flag-checkered{
+	color: green;
+
+}
+
+.fa-tint{
+	color: green;
+
+}
+
+
+
+
+
 
 .forecast-summary{
 	padding: 10px;
@@ -93,4 +123,8 @@ body{
 	font-size: 28px;
 	font-weight: bold;
 	text-align: center;
+}
+
+#Degrees{
+	display: none;
 }
