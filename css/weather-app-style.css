@@ -90,16 +90,16 @@ body{
 }
 
 .fa-tachometer{
-	color: green;
+	color: #2c3e50 ;
 }
 
 .fa-flag-checkered{
-	color: green;
+	color: #2c3e50 ;
 
 }
 
 .fa-tint{
-	color: green;
+	color: #2c3e50 ;
 
 }
 
@@ -127,4 +127,15 @@ body{
 
 #Degrees{
 	display: none;
+}
+#Ping{
+	border: 3px solid orange;
+	color: #fff;
+	transition: all ease 0.7s;
+	letter-spacing: 2px;
+}
+#Ping:hover{
+	background-color: orange;
+	border: none;
+	letter-spacing: 3px;
 }
