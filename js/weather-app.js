@@ -74,22 +74,25 @@ $(document).ready(function(){
 					if($(this).attr('data-click-state') == 1){
 						$(this).attr('data-click-state', 0)
 						$(this).css({
-							"background-color": "#7b241c",
+							"background-color": "orange",
 							"border": "none"
 						})
-						$('.fa-thermometer-half').css('color', "#7b241c")
-						$(this).text('Change to Degrees Fahreinheit')
+						$('.fa-thermometer-half').css('color', "orange")
+						$(this).html('Change to &#8451')
 						
-					var celsiusValue = (value.currently.temperature - 32) * (5/9);
-					$("#Temperature").html(celsiusValue.toFixed(2) + "&#8451");
+					//var celsiusValue = (value.currently.temperature - 32) * (5/9);
+					$("#Temperature").html(value.currently.temperature.toFixed(2) + "&#8457");
 					} else{
 						$(this).attr('data-click-state', 1)
-						$(this).css("background-color", "orange")
-						$('.fa-thermometer-half').css('color', 'orange')
-						$(this).text('Change to Degrees Celsius')
-
-					var fahreinheit = (value.currently.temperature);
-					$("#Temperature").html(fahreinheit.toFixed(2) + "&#8457");
+						$(this).css({
+							"background-color": "#7b241c",
+							"color": "#fff"
+						})
+						$('.fa-thermometer-half').css('color', '#7b241c')
+						$(this).html('Change to &#8457')
+					
+					var celsiusValue = (value.currently.temperature - 32) * (5/9);
+					$("#Temperature").html(celsiusValue.toFixed(2) + "&#8451");
 					}
 
 				});

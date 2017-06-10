@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline');
+@import url('https://fonts.googleapis.com/css?family=Basic');
+
+
 *{
 	margin: 0;
 	padding: 0;
@@ -5,6 +9,7 @@
 
 body{
 	color: #fff;
+	font-family: 'Basic', 'sans-serif';
 }
 
 .area-timezone{
@@ -15,17 +20,22 @@ body{
 	top: 0;
 	width: 100%;
 	height: 50px;
-	background-color: #000;
+	background-color:   #011b4a;
 	position: fixed;
 	left: 0;
 	right: 0;
+	line-height: 50px;
+	text-align: center;
+	font-family: 'Bungee Inline', cursive;
+	color: orange;
+	font-size: 20px;
 }
 
 .bottom{
 	bottom: 0;
 	width: 100%;
 	height: 50px;
-	background-color: #000;
+	background-color:   #011b4a;
 	position: fixed;
 	color: #fff;
 	text-align: center;
@@ -35,7 +45,7 @@ body{
 }
 
 .middle{
-	background-color: #3498DB;
+	background-color:   #011b4a; /*#3498DB;*/
 	height: auto;
 	position: fixed;
 	top: 50px;
@@ -90,32 +100,40 @@ body{
 }
 
 .fa-tachometer{
-	color: #2c3e50 ;
+	color: #1bc8ef;
 }
 
 .fa-flag-checkered{
-	color: #2c3e50 ;
+	color: #1bc8ef;
 
 }
 
 .fa-tint{
-	color: #2c3e50 ;
+	color: #1bc8ef;
 
 }
 
 
-
-
+.area-timezone{
+	margin-top: 10px;
+}
+#Address{
+  color:  #fff; /*#2c3e50; */
+  font-size: 20px;
+}
 
 
 .forecast-summary{
 	padding: 10px;
 	margin-top: 5px;
+	margin-bottom: 10px;
 	text-align: center;
+	color:  #fff;
+	font-size: 16px;
 }
 
 .temperature{
-	font-size: 38px;
+	font-size: 40px;
 	font-weight: bold;
 	text-align: center;
 }
@@ -128,14 +146,21 @@ body{
 #Degrees{
 	display: none;
 }
-#Ping{
+.btn-outline-warning{
 	border: 3px solid orange;
 	color: #fff;
 	transition: all ease 0.7s;
 	letter-spacing: 2px;
 }
-#Ping:hover{
+.btn-outline-warning:hover{
 	background-color: orange;
 	border: none;
 	letter-spacing: 3px;
+}
+
+.btn-convert{
+	background-color: orange;
+	transition: all ease 0.9s;
+    letter-spacing: 2px;
+    color: #fff;
 }
