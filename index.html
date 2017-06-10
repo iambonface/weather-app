@@ -9,13 +9,83 @@
 	<link rel="icon" href="" type="image/x-icon">
 
 	<!-- ========= Bootstrap CSS ========= -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 	<!-- ========= Font Awesome  ========= -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<!-- ========= Custom CSS    ========= -->
+	<link rel="stylesheet" type="text/css" href="./css/weather-app-style.css">
 </head>
 <body>
 
+	<div class="top">
+		lorem lorem
+	</div>
+
+		<div class="container-fluid middle">
+
+			<div class="col-md-6 col-md-offset-3 col-xs-12 col-xs-offset-0">
+
+					<div id="AreaTimezone" class="area-timezone">
+							<h2 id="Address">Moi Dr, Nairobi, Kenya</h2>
+					</div>
+
+					<div id="Climacon">
+						<img class="img-responsive cloud-icon" src="http://www.iconsdb.com/icons/preview/orange/cloud-3-xxl.png">					
+					</div>
+
+					<div class="current-state">
+						<h2 id="CurrentIcon">Partly Cloudy Day</h2>
+					</div>
+
+					<div class="temperature">
+						<span id="Temperature"> <i class="fa fa-thermometer-half"></i> 30 <sup>o</sup> C</span>
+					</div>
+
+					<div class="row forecast-row">
+						<div class="col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
+							<div class="col-md-4 col-xs-4">
+								<span id="Presure"><i class="fa fa-tachometer"></i> 1000hpa</span>				
+							</div>
+
+							<div class="col-md-4 col-xs-4">
+							    <span id="Humidity"><i class="fa fa-tint"></i> 3%</span>							
+
+							</div>
+
+							<div class="col-md-4 col-xs-4">
+								<span id="Wind"><i class="fa fa-flag-checkered"></i> 4m/s</span>						
+							</div>
+								
+						</div>
+						
+					</div>
+
+					<div class="forecast-summary">
+						<p id="Summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. sed do eiusmod.</p>
+					</div>
+					
+
+
+				
+
+			</div>
+		
+
+
+
+
+		</div>
+
+
+
+
+	<div class="bottom">
+		<div>a freeCodeCamp <i class="fa fa-free-code-camp"></i> Project</div>	
+		<div>Built with <i class="fa fa-heart"></i> by Bonface Mudiri </div>	
+		<div></div>
+	</div>
 
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -23,6 +93,7 @@
     <!-- fallback jQuery -->
 
 	<!-- Bootstrap -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<!-- Custom JS -->
 	<script src="./js/weather-app.js"></script>

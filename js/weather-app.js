@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 
-
+/*
 	getForecast();
 
 	function getForecast(){
@@ -54,3 +54,5 @@ $(document).ready(function(){
 
 	
 }); //end of document.ready()
+
+*/
