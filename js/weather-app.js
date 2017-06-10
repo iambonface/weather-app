@@ -20,6 +20,7 @@ $(document).ready(function(){
 
 		$.get(root, function(forecast){
 			$(forecast).each(function(index, value){
+				
 				//console.log(value.currently.temperature.toFixed(2));
 
 				var celsiusValue = (value.currently.temperature - 32) * (5/9);
@@ -28,10 +29,9 @@ $(document).ready(function(){
 				console.log("Temperature: " + celsiusValue.toFixed(2) + " celsius");
 				console.log("Current Status: " + value.currently.icon)
 				console.log("Forecast: "+ value.hourly.summary + value.daily.summary)
-				
 
-				
 			});
+			
 		}, 'jsonp');
 
 		//Get the address of client [Region, City, Country using the googleMap API ]
