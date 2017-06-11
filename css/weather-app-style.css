@@ -97,8 +97,6 @@ body{
 .fa-map-marker{
 	font-size: 50px;
 	color: orange;
-	-webkit-animation: updown 5s infinite;
-	animation: updown 5s infinite;
 }
 
 .fa-tachometer{
@@ -170,7 +168,38 @@ body{
 	font-size: 18px;
 }
 
-/* keyframes */
+.share-text{
+	display: block; 
+    font-size: 28px;
+    text-align: center;
+    vertical-align: middle;
+    top: 50%;
+
+}
+
+@media screen and (max-width: 480px){
+
+	.top{
+		font-size: 15px;
+	}
+	.btn-outline-warning{
+		border: 2px solid orange;
+	}
+	.fa-map-marker{
+		font-size: 35px;
+	}
+	.share-text{
+		font-size: 25px;
+    }
+    .bottom{
+    	font-size: 13px;
+    }
+    #Address{
+	  font-size: 18px;
+	}
+	.temperature{
+	font-size: 28px;
+    }
 
 
-
+}
