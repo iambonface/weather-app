@@ -187,7 +187,7 @@ $(document).ready(function(){
 			    //Humidity
 			    $("#Pressure").html(value.currently.pressure + " hPa");
 			    //Humidity
-			    $("#WindSpeed").html(value.currently.windSpeed + " m/h");
+			    $("#WindSpeed").html(value.currently.windSpeed + " mph");
 
 
 			});
