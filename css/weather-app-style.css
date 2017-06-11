@@ -1,3 +1,12 @@
+ /* ----------------------------------------------------
+Stylesheet for Tenki - Weather App [A freeCodeCamp Project ]
+version 1.0
+author: Bonface Mudiri
+email: tastywebapps@gmail.com
+webpage: https://www.linkedin.com/in/bonface/
+-------------------------------------------------------*/
+
+
 @import url('https://fonts.googleapis.com/css?family=Bungee+Inline');
 @import url('https://fonts.googleapis.com/css?family=Basic');
 
@@ -172,9 +181,15 @@ body{
 	display: block; 
     font-size: 28px;
     text-align: center;
-    vertical-align: middle;
-    top: 50%;
+	padding-top: 100px;
 
+}
+.bottom a {
+	transition: all ease-in 0.9s;
+}
+.bottom a:hover{
+	color: orange;
+	letter-spacing: 2px;
 }
 
 @media screen and (max-width: 480px){

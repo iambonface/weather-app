@@ -1,3 +1,14 @@
+/**
+ * @file Tenki - Weather App; A freeCodeCamp Project
+ * @author Bonface Mudiri 
+ * Email: tastywebapps@gmail.com
+ * Web: https://www.linkedin.com/in/bonface/
+ */
+
+
+
+
+
 $(document).ready(function(){
 
 	$("i").css({
@@ -43,9 +54,9 @@ $(document).ready(function(){
 
 
    	   	//console.log(position);
-   	   	console.log(position.coords.longitude);
+   	   	//console.log(position.coords.longitude);
    	   	var coordinate = position.coords.latitude + ',' + position.coords.longitude;
-   	   	console.log(coordinate);
+   	   	//console.log(coordinate);
 
    	   	var APIKey = '20bee9174999379e595cb1cb42b9271e'
 
@@ -58,10 +69,7 @@ $(document).ready(function(){
 				
 				//console.log(value.currently.temperature.toFixed(2));
 
-				
-
-				console.log(value);
-
+		    	//console.log(value);
 
 			    //console.log(value.currently.temperature.toFixed(2));
 			    $("#Temperature").html(value.currently.temperature.toFixed(2) + "&#8457");
@@ -101,63 +109,52 @@ $(document).ready(function(){
     			//console.log("Current Status: " + value.currently.icon);
     			//$("#CurrentIcon").html(value.currently.icon);
 
-    			//Tweak result to display with first letter capitalized
+    			//Display weather icons and tweak result to display with first letter capitalized
     			var currentForecastArr = [];
     			var str = value.currently.icon;
 
     			console.log(str);
+    			var skycons = new Skycons({"color": "orange"});
 
-    			if(str === "clear-day"){
-    			  $("#Skycons").css({
-    				"background-image": "url(./images/SVG/sun.svg)",
-    				"color": "red"
-    			})
-    				
-    			}else if(str === "clear-night"){
-    				$("#Skycons").css({
-    				"background-image": "url(./images/SVG/night.svg)",
-    			})
-
-    			}else if(str === "cloudy"){
-    				$("#Skycons").css({
-    				"background-image": "url(./images/SVG/cloudy.svg)"
-    			})
-
-    			}else if(str === "fog"){
-    				$("#Skycons").css({
-    				"background-image": "url(./images/SVG/fogg.svg)"
-    			})
-
-    			}else if(str === "partly-cloudy-day"){
-    				$("#Skycons").css({
-    				"background-image": "url(./images/SVG/cloudyi.svg)"
-    			})
-
-    			}else if(str === "partly-cloudy-night"){
-    			 $("#Skycons").css({
-    				"background-image": "url(./images/SVG/cloudy-night.svg)"
-
-    			})
-   
-    			}else if(str === "sleet"){
-    				$("#Skycons").css({
-    				"background-image": "url(./images/SVG/hail.svg)"
-    			})
-
-    			}else if(str === "snow"){
-    				$("#Skycons").css({
-    				"background-image": "url(./images/SVG/snow.svg)"
-    			})
-
-    			}else if(str === "rain"){
-    				$("#Skycons").css({
-    				"background-image": "url(./images/SVG/rain.svg)"
-    			})
-
-    			}else if(str === "wind"){
-    				$("#Skycons").css({
-    				"background-image": "url(./images/SVG/windy.svg)"
-    			})
+    			if(str.indexOf("clear-day") > -1){
+    				skycons.set("Skycons", Skycons.CLEAR_DAY);
+    				skycons.play();	
+    			}
+    			if(str.indexOf("clear-night") > -1){
+    				skycons.set("Skycons", Skycons.CLEAR_NIGHT);
+    				skycons.play();
+    			}
+    			if(str.indexOf("cloudy") > -1){
+    				skycons.set("Skycons", Skycons.CLOUDY);
+    				skycons.play();
+    			}
+    			if(str.indexOf("fog") > -1){
+    				skycons.set("Skycons", Skycons.FOG);
+    				skycons.play();
+    			}
+    			if(str.indexOf("partly-cloudy-day") > -1){
+    				skycons.set("Skycons", Skycons.PARTLY_CLOUDY_DAY);
+    				skycons.play();
+    			}
+    			if(str.indexOf("partly-cloudy-night") > -1){
+    				skycons.set("Skycons", Skycons.PARTLY_CLOUDY_NIGHT);
+    				skycons.play();
+    			}
+    			if(str.indexOf("sleet") > -1){
+    				skycons.set("Skycons", Skycons.SLEET);
+    				skycons.play();
+    			}
+    			if(str.indexOf("snow") > -1){
+    				skycons.set("Skycons", Skycons.SNOW);
+    				skycons.play();
+    			}
+    			if(str.indexOf("rain") > -1){
+    				skycons.set("Skycons", Skycons.RAIN);
+    				skycons.play();
+    			}
+    			if(str.indexOf("wind") > -1){
+    				skycons.set("Skycons", Skycons.WIND);
+    				skycons.play();
     			}
 
 

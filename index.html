@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=0, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<title>Weather App</title>
 	<link rel="icon" href="" type="image/x-icon">
@@ -42,8 +42,8 @@
 
 					<div id="Climacon">
 						<!--<i id="Cloud" class="fa fa-cloud"></i>	-->
-						<canvas id="Skycons" width="128px" height="128px" style="margin-left: auto; margin-right: auto; display: block;">
-						</canvas>				
+						<canvas id="Skycons" width="128" height="128" style="margin-left: auto; margin-right: auto; display: block;">
+						</canvas>							
 					</div>
 
 					<div class="current-state">
@@ -95,9 +95,10 @@
 
 
 	<div class="bottom">
+		<div class="row">
 		<div>a freeCodeCamp <i class="fa fa-free-code-camp"></i> Project</div>	
-		<div>Built with <i class="fa fa-heart"></i> by Bonface Mudiri </div>	
-		<div></div>
+		<div>Built with <i class="fa fa-heart"></i> by <a href="https://www.linkedin.com/in/bonface/">Bonface Mudiri</a></div>
+		</div>
 	</div>
 
 	<!-- jQuery -->
@@ -111,6 +112,7 @@
 	<!-- Custom JS -->
 	<script src="./js/weather-app.js"></script>
 
+	<script src="./js/skycons.js"></script>
 
 </body>
 </html>
