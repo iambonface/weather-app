@@ -89,7 +89,7 @@ body{
 	color: orange;
 }
 .forecast-row{
-	font-size: 15px;
+	font-size: 13px;
     text-align: center;
     margin-top: 3px;
 
@@ -97,6 +97,8 @@ body{
 .fa-map-marker{
 	font-size: 50px;
 	color: orange;
+	-webkit-animation: updown 5s infinite;
+	animation: updown 5s infinite;
 }
 
 .fa-tachometer{
@@ -125,7 +127,6 @@ body{
 
 .forecast-summary{
 	padding: 10px;
-	margin-top: 5px;
 	margin-bottom: 10px;
 	text-align: center;
 	color:  #fff;
@@ -133,7 +134,7 @@ body{
 }
 
 .temperature{
-	font-size: 40px;
+	font-size: 32px;
 	font-weight: bold;
 	text-align: center;
 }
@@ -164,3 +165,12 @@ body{
     letter-spacing: 2px;
     color: #fff;
 }
+
+.current-state h2{
+	font-size: 18px;
+}
+
+/* keyframes */
+
+
+

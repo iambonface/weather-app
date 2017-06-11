@@ -104,7 +104,64 @@ $(document).ready(function(){
     			//Tweak result to display with first letter capitalized
     			var currentForecastArr = [];
     			var str = value.currently.icon;
-    			var arr = str.split('');
+
+    			console.log(str);
+
+    			if(str === "clear-day"){
+    			  $("#Skycons").css({
+    				"background-image": "url(./images/SVG/sun.svg)",
+    				"color": "red"
+    			})
+    				
+    			}else if(str === "clear-night"){
+    				$("#Skycons").css({
+    				"background-image": "url(./images/SVG/night.svg)",
+    			})
+
+    			}else if(str === "cloudy"){
+    				$("#Skycons").css({
+    				"background-image": "url(./images/SVG/cloudy.svg)"
+    			})
+
+    			}else if(str === "fog"){
+    				$("#Skycons").css({
+    				"background-image": "url(./images/SVG/fogg.svg)"
+    			})
+
+    			}else if(str === "partly-cloudy-day"){
+    				$("#Skycons").css({
+    				"background-image": "url(./images/SVG/cloudyi.svg)"
+    			})
+
+    			}else if(str === "partly-cloudy-night"){
+    			 $("#Skycons").css({
+    				"background-image": "url(./images/SVG/cloudy-night.svg)"
+
+    			})
+   
+    			}else if(str === "sleet"){
+    				$("#Skycons").css({
+    				"background-image": "url(./images/SVG/hail.svg)"
+    			})
+
+    			}else if(str === "snow"){
+    				$("#Skycons").css({
+    				"background-image": "url(./images/SVG/snow.svg)"
+    			})
+
+    			}else if(str === "rain"){
+    				$("#Skycons").css({
+    				"background-image": "url(./images/SVG/rain.svg)"
+    			})
+
+    			}else if(str === "wind"){
+    				$("#Skycons").css({
+    				"background-image": "url(./images/SVG/windy.svg)"
+    			})
+    			}
+
+
+     			var arr = str.split('');
     			var newArr = [];
 
     			for(var i in arr){
@@ -118,7 +175,7 @@ $(document).ready(function(){
     			var newStr = newArr.join('');
     			$("#CurrentIcon").html(newStr);
 
-
+    			
 
 
 				//console.log("Forecast: "+ value.hourly.summary + value.daily.summary)
