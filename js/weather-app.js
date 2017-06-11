@@ -113,7 +113,7 @@ $(document).ready(function(){
     			var currentForecastArr = [];
     			var str = value.currently.icon;
 
-    			console.log(str);
+    			//console.log(str);
     			var skycons = new Skycons({"color": "orange"});
 
     			if(str.indexOf("clear-day") > -1){
