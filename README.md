@@ -20,8 +20,9 @@
     $ subl .
 
 ## Live Preview
-<a href="http://iambonface.github.io/weather-app">Click here to view the weather app page </a>
+<a href="http://iambonface.github.io/weather-app">Click here to view the weather app</a>
 
 ## Credits
 API endpoint courtesy of <a href="https://darksky.net/dev/docs">DarkskyAPI</a>
+
 Weather Icons provided by <a href="https://darkskyapp.github.io/skycons/">Skycons</a> 
