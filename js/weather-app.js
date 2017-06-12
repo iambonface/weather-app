@@ -194,7 +194,7 @@ $(document).ready(function(){
 			    //Humidity
 			    $("#WindSpeed").html(value.currently.windSpeed + " mph");
 
-			    $("#Address").html(value.timezone);
+			    //$("#Address").html(value.timezone);
 
 
 			});
@@ -202,11 +202,6 @@ $(document).ready(function(){
 		}, 'jsonp');
 
 		//Get the address of client [Region, City, Country using the googleMap API ]
-
-
-
-		
-		/* This API call was removed because of some browser compatibilityt issues and inacuracy with mixed content errors 
 		var mapRoot = 'http://maps.googleapis.com/maps/api/geocode/json?latlng=' 
 		               + coordinate + '&sensor=true'
 
@@ -218,7 +213,7 @@ $(document).ready(function(){
 
 			});
 
-		}); */
+		});
 
 		 
 		}); //end of navigator.geolocation.getCurrentPosition function
