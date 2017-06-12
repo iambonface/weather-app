@@ -1,5 +1,5 @@
 /**
- * @file Tenki - Weather App; A freeCodeCamp Project
+ * @file A Weather App; A freeCodeCamp Project
  * @author Bonface Mudiri 
  * Email: tastywebapps@gmail.com
  * Web: https://www.linkedin.com/in/bonface/
