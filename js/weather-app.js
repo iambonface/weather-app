@@ -80,12 +80,20 @@ $(document).ready(function(){
 		    	//console.log(value.timezone);
 
 			    //console.log(value.currently.temperature.toFixed(2));
-			    $("#Temperature").html(value.currently.temperature.toFixed(2) + "&#8457");
+			    $("#Temperature").html(Math.round(value.currently.temperature) + "&#8457");
 
 
 			    //console.log("Temperature: " + celsiusValue.toFixed(2) + " celsius");
 				//Convert to Degrees Celsius
 				$("#Degrees").click(function(){
+
+				var strCelsiusSummary = value.daily.summary
+				var newTemp = strCelsiusSummary.match(/\d+/)
+				var celsiusValue = Math.round((newTemp[0] - 32) * (5/9));
+
+				var newStrCelsiusSummary = strCelsiusSummary.replace(/\d+/g, celsiusValue)
+
+				var finalCelsius = newStrCelsiusSummary.replace("F", "C")
 
 					if($(this).attr('data-click-state') == 1){
 						$(this).attr('data-click-state', 0)
@@ -97,7 +105,10 @@ $(document).ready(function(){
 						$(this).html('Change to &#8451')
 						
 					//var celsiusValue = (value.currently.temperature - 32) * (5/9);
-					$("#Temperature").html(value.currently.temperature.toFixed(2) + "&#8457");
+					$("#Temperature").html(Math.round(value.currently.temperature) + "&#8457");
+
+					$("#Summary").html(value.hourly.summary + " " + value.daily.summary);
+
 					} else{
 						$(this).attr('data-click-state', 1)
 						$(this).css({
@@ -108,7 +119,12 @@ $(document).ready(function(){
 						$(this).html('Change to &#8457')
 					
 					var celsiusValue = (value.currently.temperature - 32) * (5/9);
-					$("#Temperature").html(celsiusValue.toFixed(2) + "&#8451");
+					$("#Temperature").html(Math.round(celsiusValue) + "&#8451");
+
+
+
+					$("#Summary").html(value.hourly.summary + " " + finalCelsius);
+
 					}
 
 				});
@@ -184,7 +200,10 @@ $(document).ready(function(){
 
 
 				//console.log("Forecast: "+ value.hourly.summary + value.daily.summary)
+
 				$("#Summary").html(value.hourly.summary + " " + value.daily.summary);
+
+
 
 
 				//Humidity
