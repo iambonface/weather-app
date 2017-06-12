@@ -27,7 +27,15 @@ $(document).ready(function(){
 	})
 
 	$("#Ping").click(function(){
-		getForecast();
+		if(navigator.geolocation){
+
+			getForecast();
+			
+		} else{
+			
+			$("#PingText").html("We have noticed your browser does not support Geolocation. Please upgrade");
+			$("#Ping").css("display", "none");
+		}
 	});
 
 
