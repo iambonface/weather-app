@@ -221,13 +221,16 @@ $(document).ready(function(){
 		}, 'jsonp');
 
 		//Get the address of client [Region, City, Country using the googleMap API ]
-		var mapRoot = 'http://maps.googleapis.com/maps/api/geocode/json?latlng=' 
-		               + coordinate + '&sensor=true'
+		/*var mapRoot = 'http://maps.googleapis.com/maps/api/geocode/json?latlng=' 
+		               + coordinate + '&sensor=true' */
+
+		var mapRoot = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + coordinate + '&key=AIzaSyCmnHxddvksEaXV_uYrgU3cjdMC5aWwF8c'
+
 
 		$.getJSON(mapRoot, function(address){
 			$(address).each(function(i, v){
 				var address = v.results[i].formatted_address;
-				//console.log(address);
+				console.log(address);
 				$("#Address").html(address);
 
 			});
