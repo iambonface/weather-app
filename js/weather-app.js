@@ -93,7 +93,20 @@ $(document).ready(function(){
 
 				var newStrCelsiusSummary = strCelsiusSummary.replace(/\d+/g, celsiusValue)
 
-				var finalCelsius = newStrCelsiusSummary.replace("F", "C")
+				var indexTemp = newStrCelsiusSummary.indexOf(celsiusValue) + 3
+
+				//console.log(indexTemp)
+
+				var indexOfF = indexTemp
+
+				//console.log(indexOfF)
+
+				//Target the index position of the "F" after the degrees value
+				String.prototype.replaceAt=function(index, replacement){
+					return this.substr(0, index) + replacement + this.substr(index + replacement.length)
+				}
+
+				var finalCelsius = newStrCelsiusSummary.replaceAt(indexOfF, "C")
 
 					if($(this).attr('data-click-state') == 1){
 						$(this).attr('data-click-state', 0)
