@@ -251,6 +251,28 @@ $(document).ready(function(){
 		});
 
 		 
+		}, function(error){
+
+			switch(error.code){
+				case error.PERMISSION_DENIED: 
+				$("#PingText").html("Oops! We cant find your forecast! Check your Geolocation permission settings and refresh");
+				$("#Ping").css("display", "none");
+					break;
+				case error.POSITION_UNAVAILABLE:
+				$("#PingText").html("It is embarassing that for some reason we cant detect your geolocation!");
+				$("#Ping").css("display", "none");
+					break;
+				case error.TIMEOUT:
+				$("#PingText").html("Geolocation timed out too fast! Refresh the page and we shall ping again!");
+				$("#Ping").css("display", "none");
+					break;
+				default:
+				$("#PingText").html("Something aweful happened! Could you please send us the error report?");
+				$("#Ping").css("display", "none");
+					break;
+
+			}
+
 		}); //end of navigator.geolocation.getCurrentPosition function
        
 
