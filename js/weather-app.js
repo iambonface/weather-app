@@ -255,15 +255,15 @@ $(document).ready(function(){
 
 			switch(error.code){
 				case error.PERMISSION_DENIED: 
-				$("#PingText").html("Oops! We cant find your forecast! Check your Geolocation permission settings and refresh");
+				$("#PingText").html("Your Geolocation is turned off. Turn it on to proceed!");
 				$("#Ping").css("display", "none");
 					break;
 				case error.POSITION_UNAVAILABLE:
-				$("#PingText").html("It is embarassing that for some reason we cant detect your geolocation!");
+				$("#PingText").html("It is embarassing! We cant detect your geolocation!");
 				$("#Ping").css("display", "none");
 					break;
 				case error.TIMEOUT:
-				$("#PingText").html("Geolocation timed out too fast! Refresh the page and we shall ping again!");
+				$("#PingText").html("Geolocation timed out too fast!");
 				$("#Ping").css("display", "none");
 					break;
 				default:
