@@ -55,8 +55,7 @@ body{
 
 .middle{
 	background-color:   #011b4a; /*#3498DB;*/
-	height: auto;
-	position: fixed;
+	position: absolute;
 	top: 50px;
 	bottom: 50px;
 	left: 0;
